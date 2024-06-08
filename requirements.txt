@@ -1,0 +1,6 @@
+flask
+SQLAlchemy
+flask-sqlalchemy
+psycopg2
+Flask-Migrate
+Blueprint
