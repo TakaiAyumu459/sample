@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    {# ページごとにカスタマイズしたスタイルを指定したい場合は各ページのテンプレートで以下のブロックを使用する
+       利用例 
+        {% block style %}
+        <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+        {% endblock %}
+    #}
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Flask機能サンプル集</h1>
+    </header>
+    {% block body %}{% endblock %}
+    <footer></footer>
+</body>
+</html>

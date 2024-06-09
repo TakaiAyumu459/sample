@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Flask機能サンプル集{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+{% endblock %}
+
+{% block body %}
+<h2>機能一覧</h2>
+<ul>
+    <li>ページごとにスタイルを切り替える sample/templates/layout.htmlとsample/templates/index.htmlを参照</li>
+    <li>bbb</li>
+    <li>ccc</li>
+</ul>
+{% endblock %}
