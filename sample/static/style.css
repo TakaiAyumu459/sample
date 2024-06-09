@@ -1,3 +1,21 @@
 body {
     background-color: #eee;
 }
+
+.flash {
+    border-style: solid;
+    border-width:  1px;
+    border-color: gray;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.flash.error {
+    border-color: #ffc0cb;
+    background-color: #ffc0cb;
+}
+
+.flash.success {
+    border-color: #98fb98;
+    background-color: #98fb98;
+}

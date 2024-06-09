@@ -10,4 +10,8 @@ app.config.from_object("sample.config")
 
 init_db(app)
 
-import sample.views.index
+# その他の機能はオブジェクトをインポートする
+from sample.views import index,photos
+
+# 写真アップロード機能サンプル
+app.register_blueprint(photos.photo, url_prefix="/photo")
