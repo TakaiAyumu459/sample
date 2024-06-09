@@ -17,6 +17,9 @@
     <header>
         <h1>Flask機能サンプル集</h1>
     </header>
+    {% for category,message in get_flashed_messages(with_categories=True):  %}
+    <p class="flash {{category}}">{{message}}</p>
+    {% endfor %}
     {% block body %}{% endblock %}
     <footer></footer>
 </body>

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Flask機能サンプル集 写真アップロード機能{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename='photo.css')}}">
+{% endblock %}
+
+{% block body %}
+<h2>写真アップロード機能</h2>
+
+<!-- ファイルのアップロードにはform要素に enctype="multipart/form-data" が必要 -->
+<form action="{{url_for('photo.upload')}}" method="post" enctype="multipart/form-data">
+<input type="file" name="file">
+<button type="submit">送信</button>
+</form>
+
+<section>
+    {% for photo in photos: %}
+    <div class="photo">
+    <img src="/photo/{{photo.id}}/src" alt="{{photo.filename}}">
+    <p>{{photo.filename}}</p>
+    <form action="/photo/{{photo.id}}/delete" onsubmit="return confirm('本当に削除しますか')">
+        <button type="submit">×</button>
+    </form>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}

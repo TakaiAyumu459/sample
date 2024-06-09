@@ -1,0 +1,39 @@
+/* 画像アップロード機能 */
+
+
+
+section {
+    margin: 2em 0;
+    display: flex;
+}
+
+.photo {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    border: solid 1px gray;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.photo button {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: white;
+    border: solid 1px black;
+    margin: 0;
+    padding: 0;
+}
+
+.photo p {
+    padding: 0 1em;
+}
